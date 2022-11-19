@@ -5,5 +5,6 @@
 
 # Enable in game warnings for plugin outdated versions
 # This will send a warning to all players with a permission when the plugin is outdated and a new version is available
-# Warnings are already sent to the console by default, this is non configurable
-enableUpdateNotifications: true
+# Warnings are already sent to the console by default, this is non-configurable
+# TODO
+# UPDATE

@@ -13,3 +13,8 @@ commands:
     usage: /help
     aliases: [ ? ]
     permission: craftycore.help
+  craftycore:
+    description: Displays information on the plugin
+    usage: /craftycore
+    aliases: [ cc ]
+    permission: craftycore.cc

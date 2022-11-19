@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ccbuild" />
         <module name="CraftyCore" />
+        <module name="org.craftystudios.craftycore" />
       </profile>
     </annotationProcessing>
   </component>
