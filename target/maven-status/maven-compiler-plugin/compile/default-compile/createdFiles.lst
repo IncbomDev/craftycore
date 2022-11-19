@@ -1,0 +1,8 @@
+org\craftystudios\commands\CraftyCoreCommand.class
+org\craftystudios\commands\CommandHelp.class
+org\craftystudios\utils\Settings.class
+org\craftystudios\utils\Logger.class
+org\craftystudios\craftycore.class
+org\craftystudios\utils\UpdateChecker.class
+org\craftystudios\utils\Logger$LogLevel.class
+org\craftystudios\utils\Logger$1.class
