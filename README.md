@@ -27,8 +27,8 @@ Configure the plugin in config.yml!
 Contribute
 ----------
 
-- [Issue Tracker](https://github.com/IncbomDev/craftycore/issues)
-- [Source Code](https://github.com/IncbomDev/craftycore)
+- [Issue Tracker](https://github.com/CraftyStudios/CraftyCore/issues)
+- [Source Code](https://github.com/CraftyStudios/CraftyCore)
 
 Support
 -------
