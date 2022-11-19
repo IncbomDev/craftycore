@@ -18,3 +18,20 @@ commands:
     usage: /craftycore
     aliases: [ cc ]
     permission: craftycore.cc
+  reload:
+    description: Reloads the plugin
+    usage: /craftycore reload
+    aliases: [ cc r ]
+    permission: craftycore.reload
+  setspawn:
+    description: Sets the spawn point
+    usage: /setspawn
+    aliases: [ ss ]
+    permission: craftycore.setspawn
+  spawn:
+    description: Teleports you to the spawn
+    usage: /spawn
+    aliases: [ s ]
+    permission: craftycore.spawn
+
+

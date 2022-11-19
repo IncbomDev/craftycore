@@ -4,5 +4,5 @@ public class Settings {
 
 
     public static String PLUGIN_URL = "https://spigotmc.org/resources/SOMENUMBER";
-    public static String VERSION = "0.1";
+    public static String VERSION = "1.1";
 }

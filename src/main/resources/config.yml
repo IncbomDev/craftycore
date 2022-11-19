@@ -6,5 +6,29 @@
 # Enable in game warnings for plugin outdated versions
 # This will send a warning to all players with a permission when the plugin is outdated and a new version is available
 # Warnings are already sent to the console by default, this is non-configurable
-# TODO
-# UPDATE
+
+# Teleports players to the spawn when they die
+deathSpawn: true
+# Teleports players to the spawn when they join
+tpToSpawn: true
+
+
+
+
+
+
+
+
+
+
+
+
+# MESSAGES
+# This section is used to configure the messages sent by the plugin
+# PREFIX is the prefix used in all messages
+# You can use color codes in the messages
+Prefix: '&c&lCrafty&6&lCore &8» &7'
+# This is the message sent to players when they get sent to spawn (/spawn)
+spawnMessage: 'You have been sent to spawn!'
+# This is the message sent to players when there is no spawn set (/setspawn)
+noSpawnMessage: 'There is no spawn set! Please try again later!'

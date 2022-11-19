@@ -19,7 +19,7 @@ public class Reload extends JavaPlugin {
 
 
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-        if (cmd.getName().equalsIgnoreCase("craftycore:reload")) {
+        if (cmd.getName().equalsIgnoreCase("craftycore reload")) {
             config = YamlConfiguration.loadConfiguration(cfile);
             sender.sendMessage(ChatColor.GREEN + "Reloaded CraftyCore's config!");
         }
