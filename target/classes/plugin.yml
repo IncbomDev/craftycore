@@ -1,0 +1,37 @@
+name: CraftyCore
+version: '${version}'
+main: org.craftystudios.craftycore
+api-version: 1.19
+prefix: [ CraftyCore ]
+load: STARTUP
+authors: [ Incbom, Pillage_ ]
+description: The Core plugin for the Crafty series
+website: craftystudios.me
+commands:
+  help:
+    description: Displays the help menu
+    usage: /help
+    aliases: [ ? ]
+    permission: craftycore.help
+  craftycore:
+    description: Displays information on the plugin
+    usage: /craftycore
+    aliases: [ cc ]
+    permission: craftycore.cc
+  reload:
+    description: Reloads the plugin
+    usage: /craftycore reload
+    aliases: [ cc r ]
+    permission: craftycore.reload
+  setspawn:
+    description: Sets the spawn point
+    usage: /setspawn
+    aliases: [ ss ]
+    permission: craftycore.setspawn
+  spawn:
+    description: Teleports you to the spawn
+    usage: /spawn
+    aliases: [ s ]
+    permission: craftycore.spawn
+
+
