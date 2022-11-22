@@ -20,7 +20,7 @@ commands:
     permission: craftycore.cc
   reload:
     description: Reloads the plugin
-    usage: /craftycore reload
+    usage: /craftycorereload
     aliases: [ cc r ]
     permission: craftycore.reload
   setspawn:
@@ -33,5 +33,11 @@ commands:
     usage: /spawn
     aliases: [ s ]
     permission: craftycore.spawn
+  sethome:
+   description: Sets your home
+   usage: /sethome
+   aliases: [ sh ]
+   permission: craftycore.sethome
+
 
 
