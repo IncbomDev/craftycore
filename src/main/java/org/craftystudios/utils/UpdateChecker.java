@@ -1,6 +1,6 @@
 package org.craftystudios.utils;
 
-import org.craftystudios.craftycore;
+import org.craftystudios.CraftyCore;
 import org.bukkit.Bukkit;
 import java.io.IOException;
 import java.net.URL;
@@ -11,8 +11,8 @@ import java.io.InputStream;
 
 public class UpdateChecker {
     private int resourceId;
-    private craftycore plugin;
-    public UpdateChecker (craftycore plugin, int resourceId) {
+    private CraftyCore plugin;
+    public UpdateChecker (CraftyCore plugin, int resourceId) {
         this.plugin = plugin;
         this.resourceId = resourceId;
                                                 }

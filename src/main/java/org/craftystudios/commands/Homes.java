@@ -9,14 +9,24 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+<<<<<<< Updated upstream
 import org.craftystudios.craftycore;
 
 import java.io.File;
+=======
+
+import java.io.File;
+import java.io.IOException;
+>>>>>>> Stashed changes
 
 public class Homes implements CommandExecutor {
     private final JavaPlugin plugin;
 
+<<<<<<< Updated upstream
     public SetHomeCommand(JavaPlugin plugin) {
+=======
+    public Homes(JavaPlugin plugin) {
+>>>>>>> Stashed changes
         this.plugin = plugin;
     }
 
@@ -36,7 +46,11 @@ public class Homes implements CommandExecutor {
                 if (homes.get("homes." + player.getUniqueId() + "." + homeName) == null) {
                     player.sendMessage(ChatColor.RED + "Home not found!");
                     return true;
+<<<<<<< Updated upstream
                 }else {
+=======
+                } else {
+>>>>>>> Stashed changes
                     Location location = new Location(
                             plugin.getServer().getWorld(homes.getString("homes." + player.getUniqueId() + "." + homeName + ".world")),
                             homes.getDouble("homes." + player.getUniqueId() + "." + homeName + ".x"),
@@ -46,6 +60,7 @@ public class Homes implements CommandExecutor {
                             (float) homes.getDouble("homes." + player.getUniqueId() + "." + homeName + ".pitch")
                     );
                     player.teleport(location);
+<<<<<<< Updated upstream
                     player.sendMessage.ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("Prefix") + plugin.getConfig().getString("HomeTeleported"));
                     return true;
                 }
@@ -58,5 +73,22 @@ public class Homes implements CommandExecutor {
                 return true;
             }
         }
+=======
+                    player.sendMessage(ChatColor.GREEN + "Teleported to home " + homeName);
+                    try {
+                        homes.save(file);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    } player.sendMessage(ChatColor.GREEN + "Home set!");
+
+                    return true;
+                }
+
+
+
+            }
+        }
+        return false;
+>>>>>>> Stashed changes
     }
 }

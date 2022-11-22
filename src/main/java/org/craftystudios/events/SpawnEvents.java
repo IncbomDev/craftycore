@@ -6,14 +6,14 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.craftystudios.craftycore;
+import org.craftystudios.CraftyCore;
 
 public class SpawnEvents extends  JavaPlugin {
 
 
-    private final craftycore plugin;
+    private final CraftyCore plugin;
 
-    public SpawnEvents(craftycore plugin) {
+    public SpawnEvents(CraftyCore plugin) {
         this.plugin = plugin;
     }
 

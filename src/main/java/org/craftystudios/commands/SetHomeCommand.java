@@ -9,7 +9,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.craftystudios.craftycore;
 
 import java.io.File;
 
@@ -45,7 +44,11 @@ public class SetHomeCommand implements CommandExecutor {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+<<<<<<< Updated upstream
                 player.sendMessage.ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("Prefix") + plugin.getConfig().getString("HomeSet"));
+=======
+                player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("Prefix") + plugin.getConfig().getString("HomeSet")));
+>>>>>>> Stashed changes
                 return true;
             }
         }
