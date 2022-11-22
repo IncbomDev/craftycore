@@ -12,22 +12,12 @@ import org.craftystudios.commands.*;
 
 import java.io.File;
 import java.io.IOException;
-import io.sentry.Sentry;
-import java.lang.Exception;
 
 
 public final class CraftyCore extends JavaPlugin {
     
    
 
-<<<<<<< Updated upstream:src/main/java/org/craftystudios/CraftyCore.java
-=======
-
-public final class CraftyCore extends JavaPlugin {
-    
-   
-
->>>>>>> Stashed changes:src/main/java/org/craftystudios/craftycore.java
     Plugin plugin = this;
 
 
@@ -42,20 +32,7 @@ public final class CraftyCore extends JavaPlugin {
     @Override
     public void onEnable() {
 
-<<<<<<< Updated upstream:src/main/java/org/craftystudios/CraftyCore.java
-        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
-            /*
-             * Register the EventListener here, when PlaceholderAPI is installed.
-             */
-            Bukkit.getPluginManager().registerEvents(this, this);
-        }else{
-            Logger.log(Logger.LogLevel.WARNING, ("PlaceholderAPI not found, disabling!"));
-            Bukkit.getPluginManager().disablePlugin(this);
 
-        }
-=======
-
->>>>>>> Stashed changes:src/main/java/org/craftystudios/craftycore.java
         // Plugin startup logic
         System.out.println("CraftyCore has been enabled!");
         this.getCommand("help").setExecutor(new CommandHelp());
@@ -65,19 +42,6 @@ public final class CraftyCore extends JavaPlugin {
                 Logger.log(Logger.LogLevel.SUCCESS, ("CraftyCore is up to date!"));
                 Logger.log(Logger.LogLevel.INFO, ("CraftyCore is running version " + this.getDescription().getVersion()));
                 Logger.log(Logger.LogLevel.INFO, ("CraftyCore: Loading Config..."));
-                loadConfig();
-                Logger.log(Logger.LogLevel.INFO, ("CraftyCore: Config Loaded!"));
-                Logger.log(Logger.LogLevel.INFO, ("CraftyCore: Loading Homes..."));
-                loadHomes();
-                Logger.log(Logger.LogLevel.INFO, ("CraftyCore: Homes Loaded!"));
-                Logger.log(Logger.LogLevel.INFO, ("CraftyCore: Loading Commands..."));
-                Logger.log(Logger.LogLevel.INFO, ("CraftyCore: Commands Loaded!"));
-                Logger.log(Logger.LogLevel.INFO, ("CraftyCore: Loading Events..."));
-                Logger.log(Logger.LogLevel.INFO, ("CraftyCore: Events Loaded!"));
-                Logger.log(Logger.LogLevel.INFO, ("CraftyCore: Loading Metrics..."));
-                Logger.log(Logger.LogLevel.INFO, ("CraftyCore: Metrics Loaded!"));
-                Logger.log(Logger.LogLevel.INFO, ("CraftyCore: Loading Sentry..."));
-                Logger.log(Logger.LogLevel.INFO, ("CraftyCore: Sentry Loaded!"));
 
                 Logger.log(Logger.LogLevel.INFO, ("CraftyCore: Config Loaded!"));
                 Logger.log(Logger.LogLevel.INFO, ("CraftyCore: Loading Homes..."));
@@ -113,9 +77,6 @@ public final class CraftyCore extends JavaPlugin {
         getCommand("CraftyCoreCommand").setExecutor(new CraftyCoreCommand());
         getCommand("CommandHelp").setExecutor(new CommandHelp());
         getCommand("Spawn").setExecutor(new Spawn(this));
-        getCommand("Homes").setExecutor(new Homes(this));
-        getCommand("SetHomeCommand").setExecutor(new SetHomeCommand(this));
-        
 
         getCommand("SetHomeCommand").setExecutor(new SetHomeCommand(this));
         

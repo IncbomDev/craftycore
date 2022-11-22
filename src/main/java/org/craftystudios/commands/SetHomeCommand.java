@@ -44,11 +44,7 @@ public class SetHomeCommand implements CommandExecutor {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-<<<<<<< Updated upstream
-                player.sendMessage.ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("Prefix") + plugin.getConfig().getString("HomeSet"));
-=======
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("Prefix") + plugin.getConfig().getString("HomeSet")));
->>>>>>> Stashed changes
                 return true;
             }
         }
