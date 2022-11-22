@@ -1,6 +1,6 @@
 name: CraftyCore
 version: '${version}'
-main: org.craftystudios.craftycore
+main: org.craftystudios
 api-version: 1.19
 prefix: [ CraftyCore ]
 load: STARTUP
