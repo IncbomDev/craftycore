@@ -1,4 +1,7 @@
 # CraftyCore
+
+# PLEASE DO NOT DOWNLOAD VERSIONS FROM /target FOLDER! THEY ARE DEV BUILDS AND DO HAVE ERRORS
+# DOWNLOAD OFFICIAL BUILDS FROM OUR SPIGOT
 ========
 
 CraftyCore is a drag and drop solution to running your Minecraft server.
