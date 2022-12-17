@@ -7,14 +7,18 @@ import org.bukkit.plugin.Plugin;
 import org.craftystudios.utils.Logger;
 import org.craftystudios.utils.Settings;
 import org.craftystudios.utils.UpdateChecker;
+import org.craftystudios.commands.aliases.*;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.craftystudios.commands.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.management.GarbageCollectorMXBean;
 
 
 public final class CraftyCore extends JavaPlugin {
+    
+    
     
    
 
@@ -31,6 +35,14 @@ public final class CraftyCore extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
+            Bukkit.getPluginManager().registerEvents(this, this);
+        } else {
+            getLogger().warn("Could not find PlaceholderAPI! This plugin is required.");
+            Bukkit.getPluginManager().disablePlugin(plugin);
+        }
+    
+
 
 
         // Plugin startup logic
@@ -79,6 +91,14 @@ public final class CraftyCore extends JavaPlugin {
         getCommand("Spawn").setExecutor(new Spawn(this));
 
         getCommand("SetHomeCommand").setExecutor(new SetHomeCommand(this));
+        getCommand("HomeCommand").setExecutor(new HomeCommand(this));
+        getCommand("gmc").setExecutor(new gmc(this));
+        getCommand("gms").setExecutor(new gms(this));
+        getCommand("gma").setExecutor(new gma(this));
+        getCommand("gmsp").setExecutor(new gmsp(this));
+        getCommand("gamemode").setExecutor(new gamemode(this));
+
+
         
 
         if(!folder.exists()) {
@@ -102,8 +122,6 @@ public final class CraftyCore extends JavaPlugin {
     }
 
     }
-
-        //register the events
 
 
     

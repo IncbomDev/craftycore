@@ -18,6 +18,10 @@
             <id>spigotmc-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
+        <repository>
+            <id>placeholderapi</id>
+            <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+        </repository>
 
 
     </repositories>
@@ -33,6 +37,12 @@
             <groupId>io.sentry</groupId>
             <artifactId>sentry</artifactId>
             <version>6.7.1</version>
+        </dependency>
+        <dependency>
+         <groupId>me.clip</groupId>
+          <artifactId>placeholderapi</artifactId>
+          <version>{VERSION}</version>
+         <scope>provided</scope>
         </dependency>
     </dependencies>
     

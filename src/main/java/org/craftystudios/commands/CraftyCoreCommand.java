@@ -12,10 +12,34 @@ public class CraftyCoreCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            Player player = (Player) sender;
-            player.sendMessage("§6§lCraftyStudios §7§l» §f§lRunning on version 1.0");
-            return false;
+
+            if( args.length == 0) {
+                sender.sendMessage("§6§lCrafty§e§lCore §7- §fHelp");
+                sender.sendMessage("§7§m-------------------------------------");
+                sender.sendMessage("§6§l/craftycore §7- §fShows the help command");
+                sender.sendMessage("§6§l/craftycore help §7- §fShows this help menu");
+                sender.sendMessage("§6§l/craftycore reload §7- §fReloads the config");
+            }
+            if(args.length == 1 || args[1].equalsIgnoreCase("help")) {
+                sender.sendMessage("§6§lCrafty§e§lCore §7- §fHelp");
+                sender.sendMessage("§7§m-------------------------------------");
+                sender.sendMessage("§6§l/craftycore §7- §fShows the help command");
+                sender.sendMessage("§6§l/craftycore help §7- §fShows this help menu");
+                sender.sendMessage("§6§l/craftycore reload §7- §fReloads the config");
+            }
+            if(args.length == 1 || args[1].equalsIgnoreCase("reload")) { 
+                if (sender.hasPermission("craftycore.reload")) {
+                    plugin.reloadConfig();
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("Prefix") + plugin.getConfig().getString("reload-message")));
+            
+                } else {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("Prefix") + plugin.getConfig().getString("no-permission")));
+
+                }
+            }
+            
         }
         return false;
     }
 }
+

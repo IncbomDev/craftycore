@@ -32,6 +32,10 @@ spawn.z:
 # This section is used to configure the messages sent by the plugin
 # PREFIX is the prefix used in all messages
 # You can use color codes in the messages
+# You may use the default messages, but EVERY SINGLE MESSAGE IS CUSTOMIZABLE 
+# You can find cool templates, premium and free, on our spigot page later. 
+# Community made templates are also avalible
+# If you want your template featured, just make a ticket in our discord 
 Prefix: '&c&lCrafty&6&lCore &8» &7'
 # This is the message sent to players when they get sent to spawn (/spawn)
 spawnMessage: 'You have been sent to spawn!'

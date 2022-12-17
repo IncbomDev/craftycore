@@ -15,8 +15,11 @@ public class Spawn implements CommandExecutor {
 
     public Spawn(JavaPlugin plugin) {
         this.plugin = plugin;
+
     }
 
+    public file messages = new File(plugin.getDataFolder(), "messages.yml");
+    public YamlConfiguration messagesConfig = YamlConfiguration.loadConfiguration(messages);
 
 
     @Override
@@ -26,6 +29,8 @@ public class Spawn implements CommandExecutor {
             sender.sendMessage(plugin.getConfig().getString("Prefix") + ChatColor.RED + "You can only run this command as a player!");
             return true;
         }
+        
+       
 
         Player p = (Player) sender;
 
@@ -34,22 +39,11 @@ public class Spawn implements CommandExecutor {
                 for (String tpNoPlayer : plugin.getConfig().getStringList("tpNoPlayer")) {
                     p.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("Prefix")+ tpNoPlayer));
                 }
-                p.sendMessage(ChatColor.RED + "Please specify a player.");
+                p.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("Prefix") + plugin.getConfig().getString("tpNoPlayer")));
+                
                 return true;
             }
-            Player target = Bukkit.getServer().getPlayer(args[0]);
-            if (target == null) {
-                for (String tpPlayerNotFound : plugin.getConfig().getStringList("tpPlayerNotFound")) {
-                    p.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("Prefix") + tpPlayerNotFound));
-                }
-                for (String tpPlayerNotFound : plugin.getConfig().getStringList("tpPlayerNotFound")) {
-                    p.sendMessage(plugin.getConfig().getString("Prefix") + tpPlayerNotFound + args[0]);
-                }
-                p.sendMessage(plugin.getConfig().getString("Prefix") + ChatColor.RED + "Could not find player " + args[0] + "!");
-                return true;
-            }
-            p.teleport(target.getLocation());
-            return true;
+            
         }
 
         if (cmd.getName().equalsIgnoreCase("setspawn")) {

@@ -39,6 +39,26 @@ commands:
    usage: /sethome
    aliases: [ sh ]
    permission: craftycore.sethome
+  gamemode:
+   description: Change your gamemode
+   usage: /gamemode
+   permission: craftycore.gamemode
+  gmc:
+   description: Change your gamemode to creative
+   usage: /gmc
+   permission: craftycore.creative
+  gms:
+   description: Change your gamemode to survival
+   usage: /gms
+   permission: craftycore.survival
+  gma:
+   description: Change your gamemode to adventure
+   usage: /gma
+   permission: craftycore.adventure
+  gmsp:
+   description: Change your gamemode to spectator
+   usage: /gmsp
+   permsission: craftycore.spectator 
 
 
 
